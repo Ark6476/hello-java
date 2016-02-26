@@ -1,9 +1,13 @@
-apply plugin: 'java'
+subprojects {
+  if (project.name != "subs") {
+    apply plugin: 'java'
 
-repositories {
-    jcenter()
-}
+    repositories {
+      jcenter()
+    }
 
-dependencies {
-    testCompile 'junit:junit:4.12'
+    dependencies {
+      testCompile 'junit:junit:4.12'
+    }
+  }
 }
